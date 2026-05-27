@@ -1,0 +1,41 @@
+{
+  "paper": "B4 FDA Nozzle PINN",
+  "implementation": "JAX/Flax NNX + Optax + jaxopt",
+  "reynolds": 500.0,
+  "piv_source": "real (Reference Papers/FDA_Dataset/PIV_Re500.csv)",
+  "n_obs": 4230,
+  "U_mean_throat": 0.41429924242424243,
+  "tau_w_peak_Pa": 2.3202536787463743,
+  "data_rel_L2_pct": 23.47984430635162,
+  "data_rel_L2_ux_pct": 23.47984430635162,
+  "data_rel_L2_ur_pct": 91.76540503416649,
+  "n_ux_measurements": 4230,
+  "n_ur_measurements": 4230,
+  "hyperparameters": {
+    "layers": [
+      2,
+      128,
+      128,
+      128,
+      128,
+      128,
+      128,
+      128,
+      128,
+      3
+    ],
+    "adam_iters": 10000,
+    "lbfgs_iters": 2000,
+    "n_interior": 3000,
+    "weights": {
+      "continuity": 1.0,
+      "mom_x": 1.0,
+      "mom_r": 1.0,
+      "wall": 0.0,
+      "inlet": 10.0,
+      "outlet": 0.1,
+      "axis": 0.0,
+      "data": 100.0
+    }
+  }
+}

@@ -1,0 +1,227 @@
+% ============================================================
+%  refs.bib — B4 FDA Nozzle PINN Paper
+%  Physics-Informed Neural Networks for Full-Field Hemodynamic
+%  Reconstruction from Sparse Experimental PIV Data
+%
+%  Author : Emmanuel Hackman
+%  PhD Computational Science, University of Southern Mississippi
+%
+%  Keys mirror the inline \bibitem entries in
+%  B4_FDA_Nozzle_PINN_Paper.tex so the paper compiles either way.
+% ============================================================
+
+% ── PINNs Core ──────────────────────────────────────────────
+
+@article{Raissi2019PINN1,
+  author  = {Raissi, M. and Perdikaris, P. and Karniadakis, G. E.},
+  title   = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
+  journal = {Journal of Computational Physics},
+  volume  = {378},
+  pages   = {686--707},
+  year    = {2019},
+  doi     = {10.1016/j.jcp.2018.10.045},
+  eprint  = {1711.10561},
+  archivePrefix = {arXiv}
+}
+
+@article{Raissi2019PINN2,
+  author  = {Raissi, M. and Perdikaris, P. and Karniadakis, G. E.},
+  title   = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations --- {Part II}},
+  journal = {Journal of Computational Physics},
+  volume  = {378},
+  pages   = {686--707},
+  year    = {2019},
+  eprint  = {1711.10566},
+  archivePrefix = {arXiv}
+}
+
+@article{Lu2021DeepXDE,
+  author  = {Lu, L. and Meng, X. and Mao, Z. and Karniadakis, G. E.},
+  title   = {{DeepXDE}: A deep learning library for solving differential equations},
+  journal = {SIAM Review},
+  volume  = {63},
+  number  = {1},
+  pages   = {208--228},
+  year    = {2021},
+  doi     = {10.1137/19M1274067},
+  eprint  = {1907.04502},
+  archivePrefix = {arXiv}
+}
+
+% ── Hidden Fluid Mechanics / PINNs for Flows ────────────────
+
+@article{Raissi2020HFM,
+  author  = {Raissi, M. and Yazdani, A. and Karniadakis, G. E.},
+  title   = {Hidden fluid mechanics: Learning velocity and pressure fields from flow visualizations},
+  journal = {Science},
+  volume  = {367},
+  number  = {6481},
+  pages   = {1026--1030},
+  year    = {2020},
+  doi     = {10.1126/science.aaw4741},
+  eprint  = {1808.04327},
+  archivePrefix = {arXiv}
+}
+
+@article{Arzani2021PINN_Blood,
+  author  = {Arzani, A. and Dawson, S. T. M.},
+  title   = {Data-driven cardiovascular flow modelling: examples and opportunities},
+  journal = {Journal of the Royal Society Interface},
+  volume  = {18},
+  number  = {175},
+  pages   = {20200802},
+  year    = {2021},
+  doi     = {10.1098/rsif.2020.0802}
+}
+
+@article{Kissas2020CardiacPINN,
+  author  = {Kissas, G. and Yang, Y. and Hwuang, E. and Witschey, W. R. and Detre, J. A. and Perdikaris, P.},
+  title   = {Machine learning in cardiovascular flows modeling: Predicting arterial blood pressure from non-invasive {4D} flow {MRI} data using physics-informed neural networks},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  volume  = {358},
+  pages   = {112623},
+  year    = {2020},
+  doi     = {10.1016/j.cma.2019.112623}
+}
+
+% ── FDA Nozzle Benchmark ────────────────────────────────────
+
+@techreport{FDA2009Nozzle,
+  author      = {{U.S. Food and Drug Administration}},
+  title       = {Assessing the credibility of computational modeling and simulation in medical device submissions},
+  institution = {FDA Critical Path Initiative White Paper},
+  year        = {2009},
+  url         = {https://www.fda.gov/medical-devices/science-and-research-medical-devices/critical-path-initiative}
+}
+
+@article{Hariharan2011FDA,
+  author  = {Hariharan, P. and Giarra, M. and Reddy, V. and Day, S. W. and Manning, K. B. and Deutsch, S. and Vigmostad, S. C. and Chandran, K. B. and Redaelli, P. P. and Malinauskas, R. A.},
+  title   = {Multilaboratory particle image velocimetry analysis of the {FDA} benchmark nozzle model to support validation of computational fluid dynamics simulations},
+  journal = {Journal of Biomechanical Engineering},
+  volume  = {133},
+  number  = {4},
+  pages   = {041002},
+  year    = {2011},
+  doi     = {10.1115/1.4003440}
+}
+
+@article{Stewart2012FDA,
+  author  = {Stewart, S. F. C. and Paterson, E. G. and Burgreen, G. W. and Hariharan, P. and Giarra, M. and Reddy, V. and Day, S. W. and Manning, K. B. and Deutsch, S. and Berman, M. R. and Myers, M. R. and Malinauskas, R. A.},
+  title   = {Assessment of {CFD} performance in simulations of an idealized medical device: Results of {FDA}'s first computational interlaboratory study},
+  journal = {Cardiovascular Engineering and Technology},
+  volume  = {3},
+  pages   = {139--160},
+  year    = {2012},
+  doi     = {10.1007/s13239-012-0087-5}
+}
+
+@article{Steinman2013FDA,
+  author  = {Steinman, D. A. and Milner, J. S. and Norris, C. J. and Lownie, Z. A. and Holdsworth, D. W.},
+  title   = {{FDA} benchmark nozzle: A computational and experimental investigation},
+  journal = {Annals of Biomedical Engineering},
+  volume  = {41},
+  pages   = {2425--2437},
+  year    = {2013}
+}
+
+% ── Wall Shear Stress ───────────────────────────────────────
+
+@article{Malek1999WSS,
+  author  = {Malek, A. M. and Alper, S. L. and Izumo, S.},
+  title   = {Hemodynamic shear stress and its role in atherosclerosis},
+  journal = {JAMA},
+  volume  = {282},
+  number  = {21},
+  pages   = {2035--2042},
+  year    = {1999},
+  doi     = {10.1001/jama.282.21.2035}
+}
+
+@article{Shadden2013WSS,
+  author  = {Shadden, S. C. and Taylor, C. A.},
+  title   = {Characterization of coherent structures in the cardiovascular system},
+  journal = {Annals of Biomedical Engineering},
+  volume  = {36},
+  pages   = {1152--1162},
+  year    = {2008},
+  doi     = {10.1007/s10439-008-9502-3}
+}
+
+% ── PINNs Training and Methods ──────────────────────────────
+
+@article{Wang2021GradientPath,
+  author  = {Wang, S. and Teng, Y. and Perdikaris, P.},
+  title   = {Understanding and mitigating gradient flow pathologies in physics-informed neural networks},
+  journal = {SIAM Journal on Scientific Computing},
+  volume  = {43},
+  number  = {5},
+  pages   = {A3055--A3081},
+  year    = {2021},
+  doi     = {10.1137/20M1318043},
+  eprint  = {2001.04536},
+  archivePrefix = {arXiv}
+}
+
+@article{Wu2023RAR,
+  author  = {Wu, C. and Zhu, M. and Tan, Q. and Kartha, Y. and Lu, L.},
+  title   = {A comprehensive study of non-adaptive and residual-based adaptive sampling for physics-informed neural networks},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  volume  = {403},
+  pages   = {115671},
+  year    = {2023},
+  doi     = {10.1016/j.cma.2022.115671},
+  eprint  = {2207.10289},
+  archivePrefix = {arXiv}
+}
+
+@article{Baydin2018AutoDiff,
+  author  = {Baydin, A. G. and Pearlmutter, B. A. and Radul, A. A. and Siskind, J. M.},
+  title   = {Automatic differentiation in machine learning: a survey},
+  journal = {Journal of Machine Learning Research},
+  volume  = {18},
+  number  = {153},
+  pages   = {1--43},
+  year    = {2018},
+  url     = {http://jmlr.org/papers/v18/17-468.html}
+}
+
+% ── FDA Regulatory Science ──────────────────────────────────
+
+@techreport{FDA2021InSilico,
+  author      = {{U.S. Food and Drug Administration}},
+  title       = {Assessing the credibility of computational modeling and simulation in medical device submissions --- Guidance for industry and {FDA} staff},
+  institution = {Center for Devices and Radiological Health},
+  year        = {2021},
+  url         = {https://www.fda.gov/regulatory-information/search-fda-guidance-documents/}
+}
+
+@techreport{FDACriticalPath2004,
+  author      = {{U.S. Food and Drug Administration}},
+  title       = {Innovation or stagnation: Challenge and opportunity on the critical path to new medical products},
+  institution = {FDA Critical Path White Paper},
+  year        = {2004},
+  url         = {https://www.fda.gov/science-research/science-and-research-special-topics/critical-path-initiative}
+}
+
+% ── Cai et al. PINNs for Fluid Mechanics Review ─────────────
+
+@article{Cai2021FluidPINN,
+  author  = {Cai, S. and Mao, Z. and Wang, Z. and Yin, M. and Karniadakis, G. E.},
+  title   = {Physics-informed neural networks ({PINNs}) for fluid mechanics: A review},
+  journal = {Acta Mechanica Sinica},
+  volume  = {37},
+  pages   = {1727--1738},
+  year    = {2021},
+  doi     = {10.1007/s10409-021-01148-1},
+  eprint  = {2105.09506},
+  archivePrefix = {arXiv}
+}
+
+% ── B3 companion paper ─────────────────────────────────────
+
+@unpublished{HackmanB3_2025,
+  author = {Hackman, E.},
+  title  = {Physics-informed neural networks for modeling dopamine neurotransmitter diffusion in synaptic clefts},
+  note   = {[in preparation], University of Southern Mississippi},
+  year   = {2025}
+}

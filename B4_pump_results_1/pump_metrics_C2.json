@@ -1,0 +1,14 @@
+{
+  "case": "C2",
+  "Q_lpm": 2.5,
+  "rpm": 3500,
+  "Re_pump": 293073,
+  "n_obs": 3942,
+  "U_scale": 3.3477415,
+  "P_scale": 11599.63121110103,
+  "data_rel_L2_mag_pct": 1.4983171317688206,
+  "stewart_2012_Eg_mag": 0.021725721381422133,
+  "vmag_peak_predicted": 4.0713736832985274,
+  "vmag_peak_pivdata": 4.11897,
+  "train_time_seconds": 682.0534424781799
+}

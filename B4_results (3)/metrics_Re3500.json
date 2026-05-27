@@ -1,0 +1,31 @@
+{
+  "reynolds": 3500,
+  "U_mean_throat_m_per_s": 2.900094696969697,
+  "P_scale_Pa": 8881.540009469696,
+  "n_obs": 4088,
+  "data_rel_L2_ux_pct": 54.31914657293492,
+  "data_rel_L2_ur_pct": 90.90543120588164,
+  "stewart_2012_Eg_ux": 0.9648645781590043,
+  "tau_w_peak_Pa": 12.863574830171325,
+  "ux_peak_predicted": 2.3039269528329522,
+  "ux_peak_pivdata": 4.0983,
+  "p_drop_Pa": 1652.4847503200222,
+  "hyperparameters": {
+    "architecture": "6 hidden x 64 units, tanh, hard BC",
+    "adam_iters": 60000,
+    "lbfgs_iters": 5000,
+    "n_interior": 8000,
+    "lr_schedule": "cosine 1e-3 -> 5e-4",
+    "data_loss": "per-component relative L2",
+    "weights": {
+      "continuity": 1.0,
+      "mom_x": 1.0,
+      "mom_r": 1.0,
+      "wall": 0.0,
+      "inlet": 10.0,
+      "outlet": 0.1,
+      "axis": 0.0,
+      "data": 400.0
+    }
+  }
+}

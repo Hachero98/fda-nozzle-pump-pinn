@@ -1,0 +1,10 @@
+HIGHLIGHTS
+
+Per JCP / Elsevier guidelines: 3-5 bullets, each ≤85 characters
+(including spaces). Action-oriented, no in-text citation.
+
+* Inverse Navier-Stokes reconstruction from sparse experimental PIV via PINN
+* Single architecture validates on both FDA inter-laboratory benchmarks
+* Vector velocity field recovered from direction-blind PIV magnitude
+* PINN beats best CFD group in FDA 28-laboratory study (E_g=0.14 vs 0.34)
+* Free Colab T4 GPU training: 11-26 min per case, 5-30x CFD speedup

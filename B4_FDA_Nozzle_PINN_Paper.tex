@@ -104,9 +104,11 @@
 
 % ── Title block ─────────────────────────────────────────────
 \title{
-  \textbf{Physics-Informed Neural Networks for Full-Field\\
-  Hemodynamic Reconstruction from Sparse Experimental PIV Data:\\
-  Validation on the FDA Critical Path Nozzle Benchmark}
+  \textbf{Mesh-Free Inverse Reconstruction of the Incompressible
+  Navier--Stokes State from Sparse and Direction-Blind PIV
+  Measurements:\\
+  A Physics-Informed Neural Network Framework Validated on the
+  FDA Critical Path Nozzle and Blood Pump Benchmarks}
 }
 
 \author{
@@ -122,45 +124,54 @@
 % ── Abstract ────────────────────────────────────────────────
 \begin{abstract}
 \noindent
-Accurate hemodynamic assessment of cardiovascular medical devices is
-critical for regulatory evaluation and patient safety. Particle image
-velocimetry (PIV) provides experimentally validated velocity
-measurements but leaves the pressure field and near-wall quantities
---- including wall shear stress (WSS) --- inaccessible. Computational
-fluid dynamics (CFD) can recover these quantities but requires hours
-to days of simulation per geometry, expert meshing, and explicit
-turbulence-model selection. We present a physics-informed neural
-network (PINN) framework that reconstructs the full hemodynamic state
---- velocity, pressure, and WSS --- by embedding the incompressible
-Navier--Stokes equations directly into the network loss and training
-on sparse, experimentally obtained PIV data. The methodology is
-validated on \emph{both} of the U.S.\ Food and Drug Administration
-(FDA) inter-laboratory benchmark medical devices: the Critical Path
-nozzle (axisymmetric, $\Reyn = 500$--$3500$, full vector PIV) and
-the Blood Pump diffuser (2D, $\Reyn_{\text{pump}} = 2.1$--$2.9
-\times 10^5$, magnitude-only PIV). On the nozzle, the PINN achieves
-relative-$L^2$ velocity error of $7.5\%$ at $\Reyn = 500$ and a
-global error metric $E_g = 0.137$ that is $2.5\times$ smaller than
-the best CFD group in the 28-laboratory Stewart~2012 inter-laboratory
-study. On the pump diffuser, the PINN recovers a fully
-vector-resolved velocity field from direction-blind PIV magnitude
-measurements with relative-$L^2$ error below $1.7\%$ across all five
-operating conditions and peak-velocity capture above $98.8\%$. Each
-case trains in $11$--$26$ minutes on a free Colab T4 GPU, a $5$--$30
-\times$ wall-clock speedup over traditional CFD on the same
-benchmarks. The cross-dataset generality --- identical architecture,
-training schedule, and loss formulation across two FDA benchmarks,
-three orders of magnitude in Reynolds number, two distinct
-geometries, and two PIV data modalities --- establishes
-physics-informed reconstruction as a transferable methodology with
-direct relevance to FDA regulatory science and medical-device
-testing pipelines.
+We present a mesh-free physics-informed neural network (PINN)
+framework for the inverse reconstruction of the full incompressible
+Navier--Stokes state --- velocity, pressure, and wall shear stress
+--- from sparse experimental particle image velocimetry (PIV)
+measurements. The framework parameterises the unknown PDE solution
+as a multi-layer perceptron with hard input normalisation and
+output scaling, trains the network parameters by minimising a
+composite loss combining a per-component relative-$L^2$ data fit
+and the Navier--Stokes residuals evaluated at uniformly resampled
+collocation points, and recovers the unmeasured pressure and
+wall-shear-stress fields through automatic differentiation without
+any auxiliary CFD simulation. We make two methodological
+contributions. First, we apply the framework to both U.S.\ Food
+and Drug Administration (FDA) inter-laboratory benchmark medical
+devices --- the Critical Path nozzle (axisymmetric,
+$\Reyn = 500$--$3500$, full-vector PIV) and the Blood Pump diffuser
+(2D Cartesian, $\Reyn_{\text{pump}} = 2.1$--$2.9 \times 10^5$,
+magnitude-only PIV) --- and show that a single architecture,
+training schedule, and loss formulation generalise across both
+geometries with no modification beyond the dimensionality of the
+domain. Second, we demonstrate that the Navier--Stokes residuals
+provide sufficient information to recover a fully vector-resolved
+velocity field from direction-blind PIV magnitude data alone: on
+all five pump-diffuser operating conditions the framework attains
+relative-$L^2$ velocity-magnitude error below $1.7\%$ and
+peak-velocity capture above $98.8\%$, with the momentum and
+continuity residuals acting as a self-consistency constraint that
+selects the unique physically-realisable vector field from the
+equivalence class compatible with the scalar PIV observation. On
+the nozzle, the framework attains relative-$L^2$ velocity error of
+$7.5\%$ at $\Reyn = 500$ and a Stewart~2012-style global error
+metric $E_g = 0.137$ that is $2.5\times$ smaller than the best
+CFD group in the 28-laboratory FDA inter-laboratory study. Each
+benchmark case trains in $11$--$26$~minutes on a single
+consumer-grade NVIDIA T4 GPU, a $5$--$30\times$ wall-clock
+speed-up relative to traditional CFD on the same problems. The
+cross-dataset transferability --- across three orders of magnitude
+in Reynolds number, two distinct geometric formulations, and two
+PIV data modalities --- establishes PINN-based reconstruction as a
+transferable inverse-problem methodology for sparse, partial, and
+direction-blind experimental fluid-mechanics data.
 
 \medskip
 \noindent\textbf{Keywords:} physics-informed neural networks,
-Navier--Stokes equations, particle image velocimetry, wall shear
-stress, FDA Critical Path nozzle, FDA Blood Pump benchmark,
-hemodynamic reconstruction, inverse problem, medical device safety
+incompressible Navier--Stokes equations, inverse problem,
+mesh-free methods, particle image velocimetry, sparse
+reconstruction, automatic differentiation, FDA Critical Path
+nozzle benchmark, FDA Blood Pump benchmark, wall shear stress
 \end{abstract}
 
 \newpage

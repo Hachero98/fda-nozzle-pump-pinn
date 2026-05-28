@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or build on the methodology, please cite both this
+  software repository and the associated journal article (see preferred-citation).
+title: >-
+  Mesh-Free Inverse Reconstruction of the Incompressible Navier-Stokes State
+  from Sparse and Direction-Blind PIV Measurements
+type: software
+authors:
+  - family-names: Hackman
+    given-names: Emmanuel
+    email: emmanuelhackman825@gmail.com
+    affiliation: >-
+      School of Mathematics and Natural Sciences, University of Southern
+      Mississippi
+    orcid: ""
+repository-code: "https://github.com/Hachero98/fda-nozzle-pump-pinn"
+url: "https://github.com/Hachero98/fda-nozzle-pump-pinn"
+abstract: >-
+  Physics-informed neural network (PINN) framework that reconstructs the full
+  incompressible Navier-Stokes state -- velocity, pressure, and wall shear
+  stress -- from sparse experimental particle image velocimetry (PIV)
+  measurements, including direction-blind magnitude-only PIV. Validated on both
+  U.S. FDA inter-laboratory benchmark medical devices: the Critical Path nozzle
+  (axisymmetric, Re = 500-3500) and the Blood Pump diffuser
+  (2D Cartesian, Re_pump = 2.1-2.9 x 10^5).
+keywords:
+  - physics-informed neural networks
+  - PINN
+  - incompressible Navier-Stokes equations
+  - inverse problem
+  - mesh-free methods
+  - particle image velocimetry
+  - sparse reconstruction
+  - automatic differentiation
+  - FDA Critical Path nozzle benchmark
+  - FDA Blood Pump benchmark
+  - wall shear stress
+  - hard-constraint magnitude enforcement
+  - cardiovascular hemodynamics
+  - computational fluid dynamics validation
+license: Apache-2.0
+version: "0.3.0-jcp-submission"
+date-released: "2026-05-27"
+preferred-citation:
+  type: article
+  title: >-
+    Mesh-Free Inverse Reconstruction of the Incompressible Navier-Stokes State
+    from Sparse and Direction-Blind PIV Measurements: A Physics-Informed Neural
+    Network Framework Validated on the FDA Critical Path Nozzle and Blood Pump
+    Benchmarks
+  authors:
+    - family-names: Hackman
+      given-names: Emmanuel
+      email: emmanuelhackman825@gmail.com
+      affiliation: >-
+        School of Mathematics and Natural Sciences, University of Southern
+        Mississippi
+  journal: "Journal of Computational Physics"
+  year: 2026
+  notes: "Under review"

@@ -1,0 +1,66 @@
+# ================================================================
+#  fda-nozzle-pump-pinn .gitignore
+# ================================================================
+
+# ----- macOS / OS metadata -----
+.DS_Store
+Thumbs.db
+
+# ----- Python build / cache -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ----- Jupyter -----
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ----- LaTeX build artifacts -----
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.tex.bak
+
+# ----- Editor / IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# ----- Copyright reference PDFs (not redistributable) -----
+Assessment_of_CFD_Performance_in_Simulat.pdf
+
+# ----- Older training-result iterations (final results kept) -----
+# Final results published: B4_results (3)/, B4_pump_results_1/
+# Earlier iterations were noise from the development process.
+B4_results/
+B4_results (1)/
+B4_results (2)/
+B4_pump_results/
+
+# ----- Convenience upload bundles (duplicates of files in repo) -----
+B4_jcp_colab_upload/
+B4_pump_colab_upload/
+
+# ----- Partial-run scratch from killed local CPU tests -----
+ablation_results/
+
+# ----- Literature reference papers (large, copyrighted) -----
+# Local literature collection -- not part of the released codebase.
+Reference Papers/
+
+# ----- Stray training logs -----
+figures/training_Re500.log
